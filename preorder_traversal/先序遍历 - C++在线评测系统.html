@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://www.duxue.pro/contest/1235/problem/T4 -->
+<html lang="en" class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="https://www.duxue.pro/favicon.ico"><link href="./先序遍历 - C++在线评测系统_files/index.min.css" rel="stylesheet"><link href="./先序遍历 - C++在线评测系统_files/github-markdown.min.css" rel="stylesheet"><link href="./先序遍历 - C++在线评测系统_files/katex.min.css" rel="stylesheet"><link href="./先序遍历 - C++在线评测系统_files/muse-ui.min.css" rel="stylesheet"><title>先序遍历 - C++在线评测系统</title><script>// IE 10 and earlier
+    if (window.navigator.userAgent.indexOf('MSIE ') > 0 &&
+      window.confirm('Your browser is not supported, click \'OK\' to update')) {
+      window.location = 'http://outdatedbrowser.com'
+    }</script><script charset="utf-8" src="chrome-extension://oakbcaafbicdddpdlhbchhpblmhefngh/dist/ruffle.js?id=64592891002"></script><style>@-webkit-keyframes enter {
+      0% {
+        opacity: 0;
+        top: -10px;
+      }
+
+      5% {
+        opacity: 1;
+        top: 0px;
+      }
+
+      50.9% {
+        opacity: 1;
+        top: 0px;
+      }
+
+      55.9% {
+        opacity: 0;
+        top: 10px;
+      }
+    }
+
+    @keyframes enter {
+      0% {
+        opacity: 0;
+        top: -10px;
+      }
+
+      5% {
+        opacity: 1;
+        top: 0px;
+      }
+
+      50.9% {
+        opacity: 1;
+        top: 0px;
+      }
+
+      55.9% {
+        opacity: 0;
+        top: 10px;
+      }
+    }
+
+    @-moz-keyframes enter {
+      0% {
+        opacity: 0;
+        top: -10px;
+      }
+
+      5% {
+        opacity: 1;
+        top: 0px;
+      }
+
+      50.9% {
+        opacity: 1;
+        top: 0px;
+      }
+
+      55.9% {
+        opacity: 0;
+        top: 10px;
+      }
+    }
+
+    body {
+      background: #f8f8f9;
+    }
+
+    #app-loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -27.5px;
+      margin-top: -27.5px;
+    }
+
+    #app-loader .square {
+      background: #2d8cf0;
+      width: 15px;
+      height: 15px;
+      float: left;
+      top: -10px;
+      margin-right: 5px;
+      margin-top: 5px;
+      position: relative;
+      opacity: 0;
+      -webkit-animation: enter 6s infinite;
+      animation: enter 6s infinite;
+    }
+
+    #app-loader .enter {
+      top: 0px;
+      opacity: 1;
+    }
+
+    #app-loader .square:nth-child(1) {
+      -webkit-animation-delay: 1.8s;
+      -moz-animation-delay: 1.8s;
+      animation-delay: 1.8s;
+    }
+
+    #app-loader .square:nth-child(2) {
+      -webkit-animation-delay: 2.1s;
+      -moz-animation-delay: 2.1s;
+      animation-delay: 2.1s;
+    }
+
+    #app-loader .square:nth-child(3) {
+      -webkit-animation-delay: 2.4s;
+      -moz-animation-delay: 2.4s;
+      animation-delay: 2.4s;
+      background: #ff9900;
+    }
+
+    #app-loader .square:nth-child(4) {
+      -webkit-animation-delay: 0.9s;
+      -moz-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+    }
+
+    #app-loader .square:nth-child(5) {
+      -webkit-animation-delay: 1.2s;
+      -moz-animation-delay: 1.2s;
+      animation-delay: 1.2s;
+    }
+
+    #app-loader .square:nth-child(6) {
+      -webkit-animation-delay: 1.5s;
+      -moz-animation-delay: 1.5s;
+      animation-delay: 1.5s;
+    }
+
+    #app-loader .square:nth-child(8) {
+      -webkit-animation-delay: 0.3s;
+      -moz-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    #app-loader .square:nth-child(9) {
+      -webkit-animation-delay: 0.6s;
+      -moz-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+
+    #app-loader .clear {
+      clear: both;
+    }
+
+    #app-loader .last {
+      margin-right: 0;
+    }
+
+    #app-loader .loader-content {
+      color: #3498db;
+      font-size: 16px;
+      font-weight: 600;
+    }</style><link href="https://www.duxue.pro/assets/css/chunk-07fef227.bc5c0306.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-0dc9ecbf.7c8a3a23.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-21732d96.1f6fb654.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-22ba7762.e0591048.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-2b52b4fe.ada2d265.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-2d45dc26.1e071925.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-38b07b5d.80fd45f0.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-3ef84ff5.7cf1d248.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-495bd884.0cb27aca.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-4b10e546.eac0a445.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-5cc63cfe.680c1d97.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-5ccaeea6.fa91b10e.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-6143454e.1b85082c.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-66e00e7b.a21b9c93.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-69c78dea.9f909ead.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-69dafeb6.3776f1a6.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-756de156.e8780b64.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-77cebcf7.69165c25.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-79937758.b3d43316.css" rel="prefetch"><link href="./先序遍历 - C++在线评测系统_files/chunk-7b553d40.879dab52.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-9d802ec6.ec8c8358.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-ae9249ea.7e34f924.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-cc9cb1b0.103d9970.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-d40011b4.cb46c73a.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-d949e95a.4e86982e.css" rel="prefetch"><link href="https://www.duxue.pro/assets/css/chunk-ddd7c1e0.04e61a3e.css" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-07fef227.944b6373.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-0dc9ecbf.427717d4.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-21732d96.d2bd65f7.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-22ba7762.f3778568.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-2b52b4fe.8b2eb4a5.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-2d0afe0f.910fc346.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-2d0d362a.d5bd185a.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-2d45dc26.c4d072e7.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-38b07b5d.223e9a5e.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-3ef84ff5.fe90837e.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-495bd884.cd71ed25.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-4b10e546.e3090b58.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-5cc63cfe.4bfc4332.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-5ccaeea6.d4d47ba5.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-6143454e.726656af.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-66e00e7b.941be0c6.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-69c78dea.67ab977c.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-69dafeb6.bc6015d3.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-74597c67.0f4fe768.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-756de156.e3db60cc.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-77cebcf7.600cb273.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-79937758.e8711590.js" rel="prefetch"><link href="./先序遍历 - C++在线评测系统_files/chunk-7b553d40.cd0c9fc1.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-9d802ec6.31963a99.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-ae9249ea.88b63669.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-cc9cb1b0.9351d001.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-d40011b4.13a94753.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-d949e95a.af23a762.js" rel="prefetch"><link href="https://www.duxue.pro/assets/js/chunk-ddd7c1e0.2b5b618a.js" rel="prefetch"><link href="./先序遍历 - C++在线评测系统_files/app.ccbaffd5.css" rel="preload" as="style"><link href="./先序遍历 - C++在线评测系统_files/chunk-vendors.bf1b8bbc.css" rel="preload" as="style"><link href="./先序遍历 - C++在线评测系统_files/app.af3d9c0f.js" rel="preload" as="script"><link href="./先序遍历 - C++在线评测系统_files/chunk-vendors.3d158e6e.js" rel="preload" as="script"><link href="./先序遍历 - C++在线评测系统_files/chunk-vendors.bf1b8bbc.css" rel="stylesheet"><link href="./先序遍历 - C++在线评测系统_files/app.ccbaffd5.css" rel="stylesheet"><style type="text/css">
+.vue-cropper[data-v-6dae58fd] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  direction: ltr;
+  touch-action: none;
+  text-align: left;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC");
+}
+.cropper-box[data-v-6dae58fd],
+.cropper-box-canvas[data-v-6dae58fd],
+.cropper-drag-box[data-v-6dae58fd],
+.cropper-crop-box[data-v-6dae58fd],
+.cropper-face[data-v-6dae58fd] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  user-select: none;
+}
+.cropper-box-canvas img[data-v-6dae58fd] {
+  position: relative;
+  text-align: left;
+  user-select: none;
+  transform: none;
+  max-width: none;
+  max-height: none;
+}
+.cropper-box[data-v-6dae58fd] {
+  overflow: hidden;
+}
+.cropper-move[data-v-6dae58fd] {
+  cursor: move;
+}
+.cropper-crop[data-v-6dae58fd] {
+  cursor: crosshair;
+}
+.cropper-modal[data-v-6dae58fd] {
+  background: rgba(0, 0, 0, 0.5);
+}
+.cropper-crop-box[data-v-6dae58fd] {
+  /*border: 2px solid #39f;*/
+}
+.cropper-view-box[data-v-6dae58fd] {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid #39f;
+  outline-color: rgba(51, 153, 255, 0.75);
+  user-select: none;
+}
+.cropper-view-box img[data-v-6dae58fd] {
+  user-select: none;
+  text-align: left;
+  max-width: none;
+  max-height: none;
+}
+.cropper-face[data-v-6dae58fd] {
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.1;
+}
+.crop-info[data-v-6dae58fd] {
+  position: absolute;
+  left: 0px;
+  min-width: 65px;
+  text-align: center;
+  color: white;
+  line-height: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+}
+.crop-line[data-v-6dae58fd] {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+.line-w[data-v-6dae58fd] {
+  top: -3px;
+  left: 0;
+  height: 5px;
+  cursor: n-resize;
+}
+.line-a[data-v-6dae58fd] {
+  top: 0;
+  left: -3px;
+  width: 5px;
+  cursor: w-resize;
+}
+.line-s[data-v-6dae58fd] {
+  bottom: -3px;
+  left: 0;
+  height: 5px;
+  cursor: s-resize;
+}
+.line-d[data-v-6dae58fd] {
+  top: 0;
+  right: -3px;
+  width: 5px;
+  cursor: e-resize;
+}
+.crop-point[data-v-6dae58fd] {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 0.75;
+  background-color: #39f;
+  border-radius: 100%;
+}
+.point1[data-v-6dae58fd] {
+  top: -4px;
+  left: -4px;
+  cursor: nw-resize;
+}
+.point2[data-v-6dae58fd] {
+  top: -5px;
+  left: 50%;
+  margin-left: -3px;
+  cursor: n-resize;
+}
+.point3[data-v-6dae58fd] {
+  top: -4px;
+  right: -4px;
+  cursor: ne-resize;
+}
+.point4[data-v-6dae58fd] {
+  top: 50%;
+  left: -4px;
+  margin-top: -3px;
+  cursor: w-resize;
+}
+.point5[data-v-6dae58fd] {
+  top: 50%;
+  right: -4px;
+  margin-top: -3px;
+  cursor: e-resize;
+}
+.point6[data-v-6dae58fd] {
+  bottom: -5px;
+  left: -4px;
+  cursor: sw-resize;
+}
+.point7[data-v-6dae58fd] {
+  bottom: -5px;
+  left: 50%;
+  margin-left: -3px;
+  cursor: s-resize;
+}
+.point8[data-v-6dae58fd] {
+  bottom: -5px;
+  right: -4px;
+  cursor: se-resize;
+}
+@media screen and (max-width: 500px) {
+.crop-point[data-v-6dae58fd] {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0.45;
+    background-color: #39f;
+    border-radius: 100%;
+}
+.point1[data-v-6dae58fd] {
+    top: -10px;
+    left: -10px;
+}
+.point2[data-v-6dae58fd],
+  .point4[data-v-6dae58fd],
+  .point5[data-v-6dae58fd],
+  .point7[data-v-6dae58fd] {
+    display: none;
+}
+.point3[data-v-6dae58fd] {
+    top: -10px;
+    right: -10px;
+}
+.point4[data-v-6dae58fd] {
+    top: 0;
+    left: 0;
+}
+.point6[data-v-6dae58fd] {
+    bottom: -10px;
+    left: -10px;
+}
+.point8[data-v-6dae58fd] {
+    bottom: -10px;
+    right: -10px;
+}
+}
+</style><link rel="stylesheet" type="text/css" href="./先序遍历 - C++在线评测系统_files/chunk-7b553d40.879dab52.css"><script charset="utf-8" src="./先序遍历 - C++在线评测系统_files/chunk-7b553d40.cd0c9fc1.js"></script><style type="text/css">.echarts{width:600px;height:400px}</style></head><body class="" style=""><noscript><strong>We're sorry but hoj-vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="el-backtop" style="right: 10px; bottom: 40px;"><i class="el-icon-caret-top"></i></div><div class="full-height flex-column"><div data-v-5331f7a2=""><div data-v-5331f7a2="" id="header"><ul data-v-5331f7a2="" role="menubar" class="el-menu--horizontal el-menu"><div data-v-5331f7a2="" class="logo" tabindex="0"><div data-v-5331f7a2="" class="el-image el-tooltip" aria-describedby="el-tooltip-1455" tabindex="0" style="width: 139px; height: 50px;"><img src="./先序遍历 - C++在线评测系统_files/logo.a0924d7d.png" class="el-image__inner" style="object-fit: scale-down;"><!----></div></div><li data-v-5331f7a2="" role="menuitem" tabindex="0" class="el-menu-item" style="color: rgb(73, 80, 96); border-bottom-color: transparent;"><i data-v-5331f7a2="" class="el-icon-s-home"></i>首页</li><li data-v-5331f7a2="" role="menuitem" tabindex="0" class="el-menu-item" style="color: rgb(73, 80, 96); border-bottom-color: transparent;"><i data-v-5331f7a2="" class="el-icon-s-grid"></i>题目</li><li data-v-5331f7a2="" role="menuitem" tabindex="0" class="el-menu-item" style="color: rgb(73, 80, 96); border-bottom-color: transparent;"><i data-v-5331f7a2="" class="el-icon-s-claim"></i>训练</li><li data-v-5331f7a2="" role="menuitem" tabindex="0" class="el-menu-item is-active" style="color: rgb(33, 150, 243); border-bottom-color: rgb(33, 150, 243);"><i data-v-5331f7a2="" class="el-icon-trophy"></i>比赛</li><li data-v-5331f7a2="" role="menuitem" tabindex="0" class="el-menu-item" style="color: rgb(73, 80, 96); border-bottom-color: transparent;"><i data-v-5331f7a2="" class="el-icon-s-marketing"></i>评测</li><li data-v-5331f7a2="" role="menuitem" aria-haspopup="true" class="el-submenu" tabindex="0"><div class="el-submenu__title" style="border-bottom-color: transparent; color: rgb(73, 80, 96);"><i data-v-5331f7a2="" class="el-icon-s-data"></i>排名<i class="el-submenu__icon-arrow el-icon-arrow-down"></i></div><div class="el-menu--horizontal" style="display: none;"><ul role="menu" class="el-menu el-menu--popup el-menu--popup-bottom-start"><li data-v-5331f7a2="" role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(73, 80, 96);">ACM 排名</li><li data-v-5331f7a2="" role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(73, 80, 96);">OI 排名</li></ul></div></li><li data-v-5331f7a2="" role="menuitem" tabindex="0" class="el-menu-item" style="color: rgb(73, 80, 96); border-bottom-color: transparent;"><i data-v-5331f7a2="" class="el-icon-s-comment"></i>讨论</li><li data-v-5331f7a2="" role="menuitem" tabindex="0" class="el-menu-item" style="color: rgb(73, 80, 96); border-bottom-color: transparent;"><i data-v-5331f7a2="" class="fa fa-users navbar-icon"></i>团队</li><li data-v-5331f7a2="" role="menuitem" aria-haspopup="true" class="el-submenu" tabindex="0"><div class="el-submenu__title" style="border-bottom-color: transparent; color: rgb(73, 80, 96);"><i data-v-5331f7a2="" class="el-icon-info"></i>关于<i class="el-submenu__icon-arrow el-icon-arrow-down"></i></div><div class="el-menu--horizontal" style="display: none;"><ul role="menu" class="el-menu el-menu--popup el-menu--popup-bottom-start"><li data-v-5331f7a2="" role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(73, 80, 96);">简介</li><li data-v-5331f7a2="" role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(73, 80, 96);">开发者</li></ul></div></li><div data-v-5331f7a2="" class="drop-menu el-dropdown"><span data-v-5331f7a2="" class="el-dropdown-link el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-1309" role="button" tabindex="0"> zziqi<i data-v-5331f7a2="" class="el-icon-caret-bottom"></i></span><ul data-v-5331f7a2="" class="el-dropdown-menu el-popper" id="dropdown-menu-1309" style="display: none;"><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!---->我的首页</li><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!---->我的提交</li><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!---->我的设置</li><!----><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided"><!---->退出登录</li></ul></div><div data-v-5331f7a2="" aria-hidden="true" class="vue-avatar--wrapper drop-avatar" style="display: inline-flex; width: 30px; height: 30px; border-radius: 50%; line-height: 31px; font-weight: bold; align-items: center; justify-content: center; text-align: center; user-select: none; background: url(&quot;/api/public/img/cb78e8a81faf44a3baf9946b16e552bb.png&quot;) 0% 0% / 30px 30px no-repeat scroll content-box border-box transparent;"><img src="./先序遍历 - C++在线评测系统_files/cb78e8a81faf44a3baf9946b16e552bb.png" style="display: none;"> <span style="display: none;"></span></div><div data-v-5331f7a2="" class="drop-msg el-dropdown"><span data-v-5331f7a2="" class="el-dropdown-link el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-3531" role="button" tabindex="0"><i data-v-5331f7a2="" class="el-icon-message-solid"></i><!----></span><ul data-v-5331f7a2="" class="el-dropdown-menu el-popper" id="dropdown-menu-3531" style="display: none;"><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!----><span data-v-5331f7a2="">评论我的</span><!----></li><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!----><span data-v-5331f7a2="">回复我的</span><!----></li><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!----><span data-v-5331f7a2="">收到的赞</span><!----></li><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!----><span data-v-5331f7a2="">系统通知</span><!----></li><li data-v-5331f7a2="" tabindex="-1" class="el-dropdown-menu__item"><!----><span data-v-5331f7a2="">我的消息</span><!----></li></ul></div></ul></div><div data-v-5331f7a2="" id="header-hidden" style="height:61px"></div><div data-v-5331f7a2="" class="el-dialog__wrapper dialog" style="z-index: 2002; display: none;"><div role="dialog" aria-modal="true" aria-label="登录 - C++在线评测系统" class="el-dialog" style="margin-top: 15vh; width: 370px;"><div class="el-dialog__header"><span class="el-dialog__title">登录 - C++在线评测系统</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><div class="el-dialog__body"></div><div class="el-dialog__footer"><div data-v-5331f7a2="" style="display: none;"></div></div></div></div></div><div id="oj-content"><div data-v-31aa6e10="" class="contest-body"><div data-v-31aa6e10="" class="el-row"><div data-v-31aa6e10="" class="el-col el-col-24 el-col-xs-24 el-col-md-24 el-col-lg-24"><div data-v-31aa6e10="" class="el-card is-always-shadow"><!----><div class="el-card__body"><div data-v-31aa6e10="" class="contest-title"><div data-v-31aa6e10="" slot="header"><span data-v-31aa6e10="" class="panel-title">BCSP-X-2024-6-小高组</span></div></div><div data-v-31aa6e10="" class="el-row" style="margin-top: 10px;"><div data-v-31aa6e10="" class="text-align:left el-col el-col-14"><span data-v-31aa6e10="" class="el-tooltip el-tag el-tag--success el-tag--plain" aria-describedby="el-tooltip-2466" tabindex="0" style="font-size: 13px;"><i data-v-31aa6e10="" class="el-icon-collection-tag"></i> 公开赛 </span><!----></div><div data-v-31aa6e10="" class="el-col el-col-10" style="text-align: right;"><!----><button data-v-31aa6e10="" type="button" class="el-button el-tooltip el-button--warning el-button--small" aria-describedby="el-tooltip-4183" tabindex="0"><!----><!----><span><i data-v-31aa6e10="" class="fa fa-trophy"></i> OI </span></button></div></div><div data-v-31aa6e10="" class="contest-time"><div data-v-31aa6e10="" class="el-row"><div data-v-31aa6e10="" class="left el-col el-col-24 el-col-xs-24 el-col-md-12"><p data-v-31aa6e10=""><i data-v-31aa6e10="" aria-hidden="true" class="fa fa-hourglass-start"></i> 开始时间：2024-06-16 13:00:00 </p></div><div data-v-31aa6e10="" class="right el-col el-col-24 el-col-xs-24 el-col-md-12"><p data-v-31aa6e10=""><i data-v-31aa6e10="" aria-hidden="true" class="fa fa-hourglass-end"></i> 结束时间：2024-06-23 14:30:00 </p></div></div></div><div data-v-31aa6e10="" class="slider"><div data-v-31aa6e10="" role="slider" aria-valuemin="0" aria-valuemax="100" aria-orientation="horizontal" class="el-slider" aria-valuetext="100" aria-label="slider between 0 and 100"><!----><div class="el-slider__runway"><div class="el-slider__bar" style="width: 100%; left: 0%;"></div><div tabindex="0" class="el-slider__button-wrapper" style="left: 100%;"><div class="el-tooltip el-slider__button" aria-describedby="el-tooltip-7594" tabindex="0"></div></div><!----><!----></div></div></div><div data-v-31aa6e10="" class="el-row"><div data-v-31aa6e10="" class="el-col el-col-24" style="text-align: center;"><span data-v-31aa6e10="" class="el-tag el-tag--medium el-tag--dark" style="color: rgb(237, 63, 20);"><i data-v-31aa6e10="" aria-hidden="true" class="fa fa-circle"></i> Ended </span></div></div><div data-v-31aa6e10="" class="contest-config"><span data-v-31aa6e10=""><div role="tooltip" id="el-popover-4060" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="display: none;"><!----><div data-v-31aa6e10="" class="contest-config-switches"><p data-v-31aa6e10=""><span data-v-31aa6e10="">包含赛后的提交</span><div data-v-31aa6e10="" role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" style="width: 40px;"></span><!----></div></p></div></div><span class="el-popover__reference-wrapper"><button data-v-31aa6e10="" type="button" class="el-button el-button--default el-button--small is-round el-popover__reference" aria-describedby="el-popover-4060" tabindex="0"><!----><!----><span> 比赛设置 </span></button></span></span></div></div></div></div></div><div data-v-31aa6e10="" class="sub-menu"><div data-v-31aa6e10="" class="el-tabs el-tabs--top"><div class="el-tabs__header is-top"><div class="el-tabs__nav-wrap is-top"><div class="el-tabs__nav-scroll"><div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(0px);"><div class="el-tabs__active-bar is-top" style="width: 46px; transform: translateX(134px);"></div><div id="tab-ContestDetails" aria-controls="pane-ContestDetails" role="tab" tabindex="-1" class="el-tabs__item is-top"><span data-v-31aa6e10=""><i data-v-31aa6e10="" class="el-icon-s-home"></i> 比赛简介</span></div><div id="tab-ContestProblemList" aria-controls="pane-ContestProblemList" role="tab" tabindex="0" class="el-tabs__item is-top is-active" aria-selected="true"><span data-v-31aa6e10=""><i data-v-31aa6e10="" aria-hidden="true" class="fa fa-list"></i> 题目</span></div><div id="tab-ContestSubmissionList" aria-controls="pane-ContestSubmissionList" role="tab" tabindex="-1" class="el-tabs__item is-top"><span data-v-31aa6e10=""><i data-v-31aa6e10="" class="el-icon-menu"></i> 状态</span></div><div id="tab-ContestRank" aria-controls="pane-ContestRank" role="tab" tabindex="-1" class="el-tabs__item is-top"><span data-v-31aa6e10=""><i data-v-31aa6e10="" aria-hidden="true" class="fa fa-bar-chart"></i> 排名</span></div><div id="tab-ContestAnnouncementList" aria-controls="pane-ContestAnnouncementList" role="tab" tabindex="-1" class="el-tabs__item is-top"><span data-v-31aa6e10=""><i data-v-31aa6e10="" aria-hidden="true" class="fa fa-bullhorn"></i> 公告</span></div><div id="tab-ContestComment" aria-controls="pane-ContestComment" role="tab" tabindex="-1" class="el-tabs__item is-top"><span data-v-31aa6e10=""><i data-v-31aa6e10="" aria-hidden="true" class="fa fa-commenting"></i> 评论</span></div></div></div></div></div><div class="el-tabs__content"><div data-v-31aa6e10="" role="tabpanel" id="pane-ContestDetails" aria-labelledby="tab-ContestDetails" class="el-tab-pane" aria-hidden="true" style="display: none;"><!----><div data-v-31aa6e10="" class="el-card box-card is-always-shadow"><!----><div class="el-card__body"><div data-v-31aa6e10="" class="markdown-body"><h3><a id="_0"></a>提前说明</h3>
+<ol>
+<li>深夜造数据，自测分数不一定十分精确，明天白天起床再检查一遍数据</li>
+<li>T4数据稳了</li>
+<li>比赛公告里会从各位同学中挑选最简洁的思路展示~</li>
+<li>建议每位自测的同学在比赛评论中写一下比赛总结！</li>
+</ol>
+<h3><a id="_6"></a>教练联系方式</h3>
+<p><mark>对数据有疑问可在比赛评论区留言或者添加教练微信！</mark><br>
+微信：zjl_1995_<br>
+小红书账号</p>
+<div class="hljs-center">
+<p><img src="./先序遍历 - C++在线评测系统_files/ec360f4502634e9393f3dd61b2996222.jpg" alt="0159c72eebeeba81204e469e99a8932.jpg"></p>
+</div>
+<h3><a id="_17"></a>重要时间节点</h3>
+<p>。基础知识测评报名:4月20日-5月12日17:00<br>
+。基础知识测评:5月19日9:30-11:30<br>
+。基础知识测评结果公示:5月24日<br>
+。基础知识测评成绩申诉:5月24日-26日<br>
+。编程能力测评:6月2日8:30-12:00<br>
+。编程能力测评结果公示:6月8日<br>
+。编程能力测评成绩申诉:6月8日-10日<br>
+。领取电子证书:7月1日起</p>
+<h3><a id="_27"></a>报名方式</h3>
+<p>登录报名系统网址 <a href="https://bcsp-x.hdast.org.cn/login?redirect=/index" target="_blank">https:/bcsp-x.hdast.org.cn</a> 进行注册、报名。学校、教师、机构注册后,学生才能注册。学校总负责教师、机构负责人 第一次注册时须按照系统要求填表、盖章并上传系统</p>
+<h3><a id="_30"></a>活动安排</h3>
+<p>1.5月15日前完成基础知识测评报名审核,确定活动场地并生成基础知识测评活动证件,参与者在报名系统下载活动证件2.5月27日生成编程能力测评活动证件,参与者在报名系统下载活动证件<br>
+3.基础知识测评地点报名结束后由组委会安排并公布<br>
+4.编程能力测评环境为Windows下DEV-C++编程环境</p>
+</div></div></div></div><div data-v-31aa6e10="" role="tabpanel" id="pane-ContestProblemList" aria-labelledby="tab-ContestProblemList" class="el-tab-pane" style=""><div data-v-3f1e66c3="" data-v-31aa6e10=""><div data-v-3f1e66c3="" id="problem-main"><div data-v-3f1e66c3="" class="problem-box el-row" id="problem-box-ContestProblemDetails"><div data-v-3f1e66c3="" class="problem-left el-col el-col-24 el-col-sm-24 el-col-md-12 el-col-lg-12" id="problem-left-ContestProblemDetails" style="width: 50%;"><div data-v-3f1e66c3="" class="el-tabs el-tabs--top el-tabs--border-card"><div class="el-tabs__header is-top"><div class="el-tabs__nav-wrap is-top"><div class="el-tabs__nav-scroll"><div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(0px);"><div id="tab-problemDetail" aria-controls="pane-problemDetail" role="tab" aria-selected="true" tabindex="0" class="el-tabs__item is-top is-active"><span data-v-3f1e66c3=""><i data-v-3f1e66c3="" class="fa fa-list-alt"> 题目描述</i></span></div><div id="tab-mySubmission" aria-controls="pane-mySubmission" role="tab" tabindex="-1" class="el-tabs__item is-top"><span data-v-3f1e66c3=""><i data-v-3f1e66c3="" class="el-icon-time"></i> 我的提交</span></div></div></div></div></div><div class="el-tabs__content"><div data-v-3f1e66c3="" role="tabpanel" id="pane-problemDetail" aria-labelledby="tab-problemDetail" class="el-tab-pane"><div data-v-3f1e66c3="" padding="10" shadow="" id="js-left-ContestProblemDetails" class="js-left" style="height:809px !important"><div data-v-3f1e66c3="" slot="header" class="panel-title"><span data-v-3f1e66c3="">先序遍历</span><br data-v-3f1e66c3=""><div data-v-3f1e66c3="" class="problem-tag"><!----><span data-v-3f1e66c3=""><span data-v-3f1e66c3="" class="el-tag el-tag--medium el-tag--plain">暂无标签</span></span></div><div data-v-3f1e66c3="" class="problem-menu"><!----><span data-v-3f1e66c3=""><a data-v-3f1e66c3="" class="el-link el-link--primary"><!----><span class="el-link--inner"><i data-v-3f1e66c3="" aria-hidden="true" class="fa fa-pie-chart"></i> 题目统计</span><!----></a></span><span data-v-3f1e66c3=""><a data-v-3f1e66c3="" class="el-link el-link--primary"><!----><span class="el-link--inner"><i data-v-3f1e66c3="" aria-hidden="true" class="fa fa-bars"></i> 全部提交</span><!----></a></span></div><div data-v-3f1e66c3="" class="question-intr"><span data-v-3f1e66c3="">时间限制：C/C++ 1000MS，其他语言 2000MS</span><br data-v-3f1e66c3=""><span data-v-3f1e66c3="">内存限制：C/C++ 512MB，其他语言 1024MB</span><br data-v-3f1e66c3=""><span data-v-3f1e66c3="">难度：<span data-v-3f1e66c3="" class="el-tag el-tag--small" style="color: rgb(255, 255, 255) !important; background-color: rgb(25, 190, 107) !important;">简单</span></span><br data-v-3f1e66c3=""><span data-v-3f1e66c3="">分数：100 </span><!----><br data-v-3f1e66c3=""><span data-v-3f1e66c3="">出题人：<a data-v-3f1e66c3="" class="author-name el-link el-link--info is-underline"><!----><span class="el-link--inner">root</span><!----></a></span><br data-v-3f1e66c3=""></div></div><div data-v-3f1e66c3="" id="problem-content"><p data-v-3f1e66c3="" class="title">描述</p><div data-v-3f1e66c3="" class="markdown-body md-content"><p>按照根-左-右的顺序遍历二叉树：</p>
+<ul>
+<li>先序遍历 = 根 + 左子树先序遍历 + 右子树先序遍历</li>
+<li>空树的先序遍历 = 空</li>
+</ul>
+<p><img src="./先序遍历 - C++在线评测系统_files/cd51870db03d4594a2084f09f8321433.png" alt="image.png"></p>
+<p>给一棵 k 个点的二叉树（根节点为 1），你可以进行以下操作至多 1 次：</p>
+<ul>
+<li>选择 1 个（除了根之外的）点 u，断开 u 和其父节点之间的边；然后重新选择另一个点作为 u 的父节点、将 u 接上去，需要保证操作之后仍然是一棵以 1 为根的二叉树。</li>
+</ul>
+<p>你想要操作之后的二叉树有字典序最小的先序遍历序列，输出这个序列。</p>
+</div><p data-v-3f1e66c3="" class="title">输入描述</p><div data-v-3f1e66c3="" class="markdown-body md-content"><p>第一行 1 个整数 T，代表有 T 组数据<br>
+每组数据第一行 1 个整数 k<br>
+接下来 k 行，每行 2 个整数 ls[i], rs[i] 代表 i 号节点的左右儿子编号，没有左右儿子的话用 0 表示</p>
+</div><p data-v-3f1e66c3="" class="title">输出描述</p><div data-v-3f1e66c3="" class="markdown-body md-content"><p>对于每组数据，输出 k 个整数，代表字典序最小的二叉树先序遍历</p>
+</div><div data-v-3f1e66c3=""><div data-v-3f1e66c3="" class="flex-container example"><div data-v-3f1e66c3="" class="example-input"><p data-v-3f1e66c3="" class="title"> 用例输入 1 <a data-v-3f1e66c3="" class="copy"><i data-v-3f1e66c3="" class="el-icon-document-copy"></i></a></p><pre data-v-3f1e66c3="">12
+4
+2 3
+0 4
+0 0
+0 0
+5
+2 3
+0 4
+0 5
+0 0
+0 0
+6
+5 2
+3 6
+4 0
+0 0
+0 0
+0 0
+6
+2 3
+6 4
+0 5
+0 0
+0 0
+0 0
+6
+5 2
+3 0
+4 0
+6 0
+0 0
+0 0
+6
+3 2
+4 6
+0 0
+5 0
+0 0
+0 0
+6
+4 2
+5 3
+0 0
+0 0
+0 6
+0 0
+6
+3 2
+0 0
+5 4
+0 6
+0 0
+0 0
+6
+2 3
+0 0
+5 4
+0 6
+0 0
+0 0
+6
+3 2
+4 5
+0 0
+0 6
+0 0
+0 0
+6
+2 3
+0 4
+0 0
+0 5
+0 6
+0 0
+6
+2 5
+3 4
+0 0
+0 0
+6 0
+0 0</pre></div><div data-v-3f1e66c3="" class="example-output"><p data-v-3f1e66c3="" class="title"> 用例输出 1 <a data-v-3f1e66c3="" class="copy"><i data-v-3f1e66c3="" class="el-icon-document-copy"></i></a></p><pre data-v-3f1e66c3="">1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 4 3 5 6
+1 2 3 4 6 5
+1 2 4 5 3 6
+1 2 5 4 6 3
+1 2 3 5 4 6
+1 2 3 4 5 6
+1 2 4 3 6 5
+1 2 3 4 5 6
+1 2 3 4 5 6</pre></div></div></div><p data-v-3f1e66c3="" class="title">提示</p><div data-v-3f1e66c3="" class="el-card is-always-shadow" dis-hover=""><!----><div class="el-card__body"><div data-v-3f1e66c3="" class="markdown-body hint-content"><p>样例解释 #1:<br>
+对于第一个样例，可以把 3 号节点连在 2 号节点的左儿子处。<br>
+对于第二个样例，可以把 4 号节点连在 3 号节点的左儿子处。</p>
+<p>数据范围：</p>
+<p>对于所有数据，令 ∑k 代表每组数据中 k 的和，1 ≤ T ≤ 100, 1 ≤ k ≤ 10^5, 1 ≤ ∑k ≤ 3 × 10^5，保证输入是一棵以 1 为根的二叉树<br>
+对于测试点 1~3：k ≤ 10<br>
+对于测试点 4~8：k ≤ 200<br>
+对于测试点 9~11：k ≤ 1000<br>
+对于测试点 12~14：k ≤ 10^5 且所有 ls[i] = 0<br>
+对于测试点 15：k ≤ 10^5 且所有 rs[i] = 0<br>
+对于测试点 16~20：k ≤ 10^5</p>
+</div></div></div><!----></div></div><div class="el-loading-mask" style="display: none;"><div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular"><circle cx="50" cy="50" r="20" fill="none" class="path"></circle></svg><!----></div></div></div><div data-v-3f1e66c3="" role="tabpanel" aria-hidden="true" id="pane-mySubmission" aria-labelledby="tab-mySubmission" class="el-tab-pane" style="display: none;"><div data-v-3f1e66c3="" id="js-submission" style="margin-right: 10px;"><div data-v-3f1e66c3="" class="vxe-table tid_88 border--inner show--head t--animat t--stripe is--empty scroll--x"><div class="vxe-table-slots"><div data-v-3f1e66c3=""></div><div data-v-3f1e66c3=""></div><div data-v-3f1e66c3=""></div><div data-v-3f1e66c3=""></div><div data-v-3f1e66c3=""></div><div data-v-3f1e66c3=""></div></div><div class="vxe-table--main-wrapper"><div data-tid="88" class="vxe-table--header-wrapper body--wrapper"><div class="vxe-body--x-space"></div><table data-tid="88" cellspacing="0" cellpadding="0" border="0" class="vxe-table--header" style="width: 642px;"><colgroup><col name="col_89" style="width: 96px;"><col name="col_90" style="width: 160px;"><col name="col_91" style="width: 96px;"><col name="col_92" style="width: 96px;"><col name="col_94" style="width: 64px;"><col name="col_93" style="width: 130px;"></colgroup><thead><tr class="vxe-header--row"><th data-colid="col_89" class="vxe-header--column col_89 col--center"><div class="vxe-cell"><span class="vxe-cell--title">提交时间</span></div></th><th data-colid="col_90" class="vxe-header--column col_90 col--center"><div class="vxe-cell"><span class="vxe-cell--title">状态</span></div></th><th data-colid="col_91" class="vxe-header--column col_91 col--center"><div class="vxe-cell"><span class="vxe-cell--title">运行时间</span></div></th><th data-colid="col_92" class="vxe-header--column col_92 col--center"><div class="vxe-cell"><span class="vxe-cell--title">运行内存</span></div></th><th data-colid="col_94" class="vxe-header--column col_94 col--center"><div class="vxe-cell"><span class="vxe-cell--title">分数</span></div></th><th data-colid="col_93" class="vxe-header--column col_93 col--center col--last"><div class="vxe-cell"><span class="vxe-cell--title">语言</span></div></th></tr></thead></table><div class="vxe-table--header-border-line" style="width: 642px;"></div></div><div data-tid="88" class="vxe-table--body-wrapper body--wrapper"><div class="vxe-body--x-space"></div><div class="vxe-body--y-space"></div><table data-tid="88" cellspacing="0" cellpadding="0" border="0" class="vxe-table--body" style="width: 642px;"><colgroup><col name="col_89" style="width: 96px;"><col name="col_90" style="width: 160px;"><col name="col_91" style="width: 96px;"><col name="col_92" style="width: 96px;"><col name="col_94" style="width: 64px;"><col name="col_93" style="width: 130px;"></colgroup><tbody></tbody></table><div class="vxe-table--checkbox-range"></div><div class="vxe-table--empty-block" style="width: 642px;"><div class="vxe-table--empty-content">暂无数据</div></div></div></div><!----><!----><div class="vxe-table--empty-placeholder" style="top: 0px; height: 0px;"><div class="vxe-table--empty-content">暂无数据</div></div><div class="vxe-table--border-line"></div><!----><div class="vxe-table--loading vxe-loading"><div class="vxe-loading--spinner"></div></div><!----><!----><!----></div><div data-v-7a1c019c="" data-v-3f1e66c3="" class="page"><!----></div></div></div><!----></div></div></div><div data-v-3f1e66c3="" id="js-center-ContestProblemDetails" title="收缩侧边栏" class="problem-resize hidden-sm-and-down" style="top:404.5px !important; left:50%"><span data-v-3f1e66c3="">⋮</span><span data-v-3f1e66c3=""><button data-v-3f1e66c3="" type="button" class="el-button el-tooltip right-fold fold el-button--default el-button--mini is-circle" aria-describedby="el-tooltip-6036" tabindex="0"><!----><i class="el-icon-caret-right"></i><!----></button></span></div><div data-v-3f1e66c3="" class="problem-right el-col el-col-24 el-col-sm-24 el-col-md-12 el-col-lg-12" id="problem-right-ContestProblemDetails" style="width: 50%;"><div data-v-3f1e66c3="" class="el-card submit-detail is-always-shadow" padding="10" id="submit-code"><!----><div class="el-card__body"><div data-v-1c7438c4="" data-v-3f1e66c3="" style="margin: 0px 0px 15px; font-size: 14px; position: relative;"><div data-v-1c7438c4="" class="header el-row" id="js-right-header"><div data-v-1c7438c4="" class="el-col el-col-24 el-col-xs-24 el-col-sm-16 el-col-md-16 el-col-lg-16"><div data-v-1c7438c4="" class="select-row"><span data-v-1c7438c4="">语言:</span><span data-v-1c7438c4=""><div data-v-1c7438c4="" class="el-select left-adjust el-select--small"><!----><div class="el-input el-input--small el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="display: none; min-width: 170px;"><div class="el-scrollbar" style=""><div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li data-v-1c7438c4="" class="el-select-dropdown__item selected">C++ </li><li data-v-1c7438c4="" class="el-select-dropdown__item">C++ 17 </li><li data-v-1c7438c4="" class="el-select-dropdown__item">C++ 20 </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Java </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Python3 </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Python2 </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Golang </li><li data-v-1c7438c4="" class="el-select-dropdown__item">C# </li><li data-v-1c7438c4="" class="el-select-dropdown__item">PHP </li><li data-v-1c7438c4="" class="el-select-dropdown__item">PyPy2 </li><li data-v-1c7438c4="" class="el-select-dropdown__item">PyPy3 </li><li data-v-1c7438c4="" class="el-select-dropdown__item">JavaScript Node </li><li data-v-1c7438c4="" class="el-select-dropdown__item">JavaScript V8 </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Ruby </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Rust </li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div></div></div><!----></div></div></span><span data-v-1c7438c4=""><button data-v-1c7438c4="" type="button" class="el-button el-tooltip el-button--default el-button--small" aria-describedby="el-tooltip-4854" tabindex="0"><!----><i class="el-icon-refresh"></i><!----></button></span><span data-v-1c7438c4=""><button data-v-1c7438c4="" type="button" class="el-button el-tooltip el-button--default el-button--small" aria-describedby="el-tooltip-2601" tabindex="0"><!----><i class="el-icon-download"></i><!----></button></span></div></div><div data-v-1c7438c4="" class="el-col el-col-24 el-col-xs-24 el-col-sm-8 el-col-md-8 el-col-lg-8"><div data-v-1c7438c4="" class="select-row fl-right"><span data-v-1c7438c4=""><button data-v-1c7438c4="" type="button" class="el-button el-tooltip el-button--default el-button--small" aria-describedby="el-tooltip-9662" tabindex="0"><!----><i class="el-icon-upload"></i><!----></button></span><span data-v-1c7438c4=""><input data-v-1c7438c4="" type="file" id="file-uploader" style="display: none;"></span><span data-v-1c7438c4=""><span data-v-1c7438c4="" class="el-tooltip" aria-describedby="el-tooltip-6689" tabindex="0"><div role="tooltip" id="el-popover-5754" aria-hidden="true" class="el-popover el-popper" tabindex="0" style="width: 300px; display: none;"><!----><div data-v-1c7438c4="" class="setting-title">设置</div><div data-v-1c7438c4="" class="setting-item"><span data-v-1c7438c4="" class="setting-item-name"><i data-v-1c7438c4="" class="fa fa-tachometer"></i> 主题 </span><div data-v-1c7438c4="" class="el-select setting-item-value el-select--small"><!----><div class="el-input el-input--small el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="display: none;"><div class="el-scrollbar" style=""><div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li data-v-1c7438c4="" class="el-select-dropdown__item">Monokai </li><li data-v-1c7438c4="" class="el-select-dropdown__item selected">Molarized Light </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Material </li><li data-v-1c7438c4="" class="el-select-dropdown__item">IDEA </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Eclipse </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Base16-dark </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Cobalt </li><li data-v-1c7438c4="" class="el-select-dropdown__item">Dracula </li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div></div></div><!----></div></div></div><div data-v-1c7438c4="" class="setting-item"><span data-v-1c7438c4="" class="setting-item-name"><i data-v-1c7438c4="" class="fa fa-font"></i> 字体大小 </span><div data-v-1c7438c4="" class="el-select setting-item-value el-select--small"><!----><div class="el-input el-input--small el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="display: none;"><div class="el-scrollbar" style=""><div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li data-v-1c7438c4="" class="el-select-dropdown__item">12px </li><li data-v-1c7438c4="" class="el-select-dropdown__item selected">14px </li><li data-v-1c7438c4="" class="el-select-dropdown__item">16px </li><li data-v-1c7438c4="" class="el-select-dropdown__item">18px </li><li data-v-1c7438c4="" class="el-select-dropdown__item">20px </li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div></div></div><!----></div></div></div><div data-v-1c7438c4="" class="setting-item"><span data-v-1c7438c4="" class="setting-item-name"><svg data-v-1c7438c4="" focusable="false" viewBox="0 0 1024 1024" fill="currentColor" width="1.2em" height="1.2em" aria-hidden="true" style="vertical-align: text-bottom;"><g data-v-1c7438c4="" transform="translate(101.57 355.48)"><rect data-v-1c7438c4="" width="812.53" height="152.35" x="0" y="0" rx="50.78"></rect><rect data-v-1c7438c4="" width="812.53" height="50.78" x="0" y="253.92" rx="25.39"></rect><rect data-v-1c7438c4="" width="50.78" height="203.13" x="0" y="177.74" rx="25.39"></rect><rect data-v-1c7438c4="" width="50.78" height="203.13" x="761.75" y="177.74" rx="25.39"></rect></g></svg> Tab 长度 </span><div data-v-1c7438c4="" class="el-select setting-item-value el-select--small"><!----><div class="el-input el-input--small el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!----></div><div class="el-select-dropdown el-popper" style="display: none;"><div class="el-scrollbar" style=""><div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;"><ul class="el-scrollbar__view el-select-dropdown__list"><!----><li data-v-1c7438c4="" class="el-select-dropdown__item"> 2个空格 </li><li data-v-1c7438c4="" class="el-select-dropdown__item selected"> 4个空格 </li><li data-v-1c7438c4="" class="el-select-dropdown__item"> 8个空格 </li></ul></div><div class="el-scrollbar__bar is-horizontal"><div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div></div><div class="el-scrollbar__bar is-vertical"><div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div></div></div><!----></div></div></div></div><span class="el-popover__reference-wrapper"><button data-v-1c7438c4="" type="button" class="el-button el-button--default el-button--small el-popover__reference" aria-describedby="el-popover-5754" tabindex="0"><!----><i class="el-icon-s-tools"></i><!----></button></span></span></span><span data-v-1c7438c4="" class="hidden-sm-and-down"><button data-v-1c7438c4="" type="button" class="el-button el-tooltip el-button--default el-button--small" aria-describedby="el-tooltip-2615" tabindex="0"><!----><i class="el-icon-full-screen"></i><!----></button></span></div></div></div><div data-v-1c7438c4="" style="line-height: 1.5; font-size: 14px;"><div data-v-1c7438c4="" class="vue-codemirror-wrap js-right"><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-solarized CodeMirror-wrap" style="width: 100%; height: 713px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 45px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 41px; margin-bottom: -10px; border-right-width: 40px; min-height: 8px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 0px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -41px; width: 41px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -41px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 40px; width: 1px; border-bottom: 0px solid transparent; top: 8px;"></div><div class="CodeMirror-gutters" style="height: 48px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 31px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div></div><div data-v-1c7438c4="" tabindex="-1" class="el-drawer__wrapper" style="display: none; position: absolute;"><div role="document" tabindex="-1" class="el-drawer__container"><div aria-modal="true" aria-labelledby="el-drawer__title" aria-label="" role="dialog" tabindex="-1" class="el-drawer btt" style="height: 40%;"><!----><!----></div></div></div></div><div data-v-3f1e66c3="" id="js-right-bottom"><div data-v-3f1e66c3="" class="el-row"><div data-v-3f1e66c3="" class="el-col el-col-24 el-col-sm-24 el-col-md-10 el-col-lg-10" style="margin-top: 4px;"><!----><!----><div data-v-3f1e66c3=""><div data-v-3f1e66c3="" role="alert" class="el-alert el-alert--warning is-dark"><i class="el-alert__icon el-icon-warning is-big"></i><div class="el-alert__content"><!----><p class="el-alert__description">比赛已结束</p><!----><i class="el-alert__closebtn el-icon-close" style="display: none;"></i></div></div></div></div><div data-v-3f1e66c3="" class="el-col el-col-24 el-col-sm-24 el-col-md-14 el-col-lg-14" style="margin-top: 4px;"><!----><button data-v-3f1e66c3="" type="button" class="el-button fl-right el-button--primary el-button--small"><!----><i class="el-icon-edit-outline"></i><span><span data-v-3f1e66c3="">提交评测</span></span></button><span data-v-3f1e66c3="" class="el-tag el-tag--success el-tag--plain tj-btn non-active"><svg data-v-3f1e66c3="" t="1653665263421" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1656" width="12" height="12" class="icon" style="vertical-align: middle;"><path data-v-3f1e66c3="" d="M1022.06544 583.40119c0 11.0558-4.034896 20.61962-12.111852 28.696576-8.077979 8.077979-17.639752 12.117992-28.690436 12.117992L838.446445 624.215758c0 72.690556-14.235213 134.320195-42.718941 184.89915l132.615367 133.26312c8.076956 8.065699 12.117992 17.634636 12.117992 28.690436 0 11.050684-4.034896 20.614503-12.117992 28.691459-7.653307 8.065699-17.209964 12.106736-28.690436 12.106736-11.475356 0-21.040199-4.041036-28.690436-12.106736L744.717737 874.15318c-2.124384 2.118244-5.308913 4.88424-9.558703 8.283664-4.259 3.3984-13.180184 9.463536-26.78504 18.171871-13.598716 8.715499-27.415396 16.473183-41.439808 23.276123-14.029528 6.797823-31.462572 12.966313-52.289923 18.49319-20.827351 5.517667-41.446971 8.28571-61.842487 8.28571L552.801776 379.38668l-81.611739 0 0 571.277058c-21.668509 0-43.250036-2.874467-64.707744-8.615215-21.473057-5.734608-39.960107-12.749372-55.476499-21.039175-15.518438-8.289804-29.541827-16.572444-42.077328-24.867364-12.541641-8.290827-21.781072-15.193027-27.739784-20.714787l-9.558703-8.93244L154.95056 998.479767c-8.500605 8.921183-18.699897 13.386892-30.606065 13.386892-10.201339 0-19.335371-3.40454-27.409257-10.202363-8.079002-7.652284-12.437264-17.10968-13.080923-28.372188-0.633427-11.263531 2.659573-21.143553 9.893324-29.647227l128.787178-144.727219c-24.650423-48.464805-36.980239-106.699114-36.980239-174.710091L42.738895 624.207571c-11.057847 0-20.61655-4.041036-28.690436-12.111852-8.079002-8.082072-12.120039-17.640776-12.120039-28.696576 0-11.050684 4.041036-20.61962 12.120039-28.689413 8.073886-8.072863 17.632589-12.107759 28.690436-12.107759l142.81466 0L185.553555 355.156836l-110.302175-110.302175c-8.074909-8.077979-12.113899-17.640776-12.113899-28.691459 0-11.04966 4.044106-20.61962 12.113899-28.690436 8.071839-8.076956 17.638729-12.123109 28.691459-12.123109 11.056823 0 20.612457 4.052293 28.692482 12.123109l110.302175 110.302175 538.128077 0 110.303198-110.302175c8.070816-8.076956 17.632589-12.123109 28.690436-12.123109 11.050684 0 20.617573 4.052293 28.689413 12.123109 8.077979 8.070816 12.119015 17.640776 12.119015 28.690436 0 11.050684-4.041036 20.614503-12.119015 28.691459l-110.302175 110.302175 0 187.448206 142.815683 0c11.0558 0 20.618597 4.034896 28.690436 12.113899 8.076956 8.069793 12.117992 17.638729 12.117992 28.683273l0 0L1022.06544 583.40119 1022.06544 583.40119zM716.021162 216.158085 307.968605 216.158085c0-56.526411 19.871583-104.667851 59.616796-144.414087 39.733956-39.746236 87.88256-59.611679 144.411017-59.611679 56.529481 0 104.678084 19.865443 144.413064 59.611679C696.156742 111.48921 716.021162 159.631674 716.021162 216.158085L716.021162 216.158085 716.021162 216.158085 716.021162 216.158085z" p-id="1657" fill="#67c23a"></path></svg><span data-v-3f1e66c3="" style="vertical-align: middle;"> 在线自测 </span></span></div></div></div></div></div></div></div></div><!----><div data-v-3f1e66c3="" class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog" style="margin-top: 15vh; width: 400px;"><div class="el-dialog__header"><span class="el-dialog__title"></span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><div class="el-dialog__footer"><div data-v-3f1e66c3=""><button data-v-3f1e66c3="" type="button" class="el-button el-button--ghost el-button--small"><!----><!----><span>关闭</span></button></div></div></div></div><div data-v-3f1e66c3="" class="el-dialog__wrapper" style="display: none;"><div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog" style="margin-top: 15vh; width: 340px;"><div class="el-dialog__header"><span class="el-dialog__title"></span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><!----><!----></div></div></div></div><!----><!----><div data-v-31aa6e10="" role="tabpanel" id="pane-ContestAnnouncementList" aria-labelledby="tab-ContestAnnouncementList" class="el-tab-pane" aria-hidden="true" style="display: none;"><!----></div><!----><!----><!----><!----><!----><!----></div></div></div></div></div><footer class="fix-to-bottom"><div class="mundb-footer"><div class="el-row"><div class="el-col el-col-24 el-col-xs-24 el-col-md-6"><h1>Hcode Online Judge</h1><span style="line-height: 25px;">C++在线评测系统</span></div><div class="hr-none el-col el-col-24"><div class="el-divider el-divider--horizontal"><!----></div></div><div class="el-col el-col-24 el-col-xs-24 el-col-md-6"><h1>服务</h1><p><a>评测队列</a></p></div><div class="hr-none el-col el-col-24"><div class="el-divider el-divider--horizontal"><!----></div></div><div class="el-col el-col-24 el-col-xs-24 el-col-md-6"><h1>开发</h1><p class="mb-1"><a>API</a></p></div><div class="hr-none el-col el-col-24"><div class="el-divider el-divider--horizontal"><!----></div></div><div class="el-col el-col-24 el-col-xs-24 el-col-md-6"><h1>支持</h1><p><i aria-hidden="true" class="fa fa-info-circle"></i><a> 关于</a></p></div></div></div><div class="mundb-footer"><a href="https://beian.miit.gov.cn/" target="_blank" style="color: rgb(30, 159, 255);">京ICP备2022034125号</a> Powered by <a href="https://gitee.com/himitzh0730/hoj" target="_blank" style="color: rgb(30, 159, 255);">HOJ</a><span style="margin-left: 10px;"><div class="el-dropdown"><span class="el-dropdown-link el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-669" role="button" tabindex="0"><i aria-hidden="true" class="fa fa-globe"> 简体中文</i><i class="el-icon-arrow-up el-icon--right"></i></span><ul class="el-dropdown-menu el-popper" id="dropdown-menu-669" style="display: none;"><li tabindex="-1" class="el-dropdown-menu__item"><!---->简体中文</li><li tabindex="-1" class="el-dropdown-menu__item"><!---->English</li></ul></div></span></div></footer></div></div><script src="./先序遍历 - C++在线评测系统_files/vue.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/vue-router.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/axios.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/index.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/highlight.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/moment.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/zh-cn.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/en-gb.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/echarts.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/vue-echarts.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/vuex.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/katex.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/auto-render.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/muse-ui.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/jquery.min.js"></script><script src="./先序遍历 - C++在线评测系统_files/chunk-vendors.3d158e6e.js"></script><script src="./先序遍历 - C++在线评测系统_files/app.af3d9c0f.js"></script><div class="vxe-table88-wrapper "><!----><!----><!----></div></body></html>
